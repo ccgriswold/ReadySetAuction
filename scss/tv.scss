@@ -1,0 +1,53 @@
+#tvview{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  background-color: white;
+  padding: 2.5%;
+  margin-top: 2%;
+  border-radius: 5px;
+
+  h1{
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 4vw;
+    color: black;
+  }
+  a{
+    text-decoration: none;
+    font-size: 3vw;
+    margin-left: 4%;
+    color: red;
+  }
+  a:hover{
+    color: orange;
+  }
+  a:visited{
+    color: red;
+  }
+  #altStream{
+    font-size: 3.5vw;
+    margin-left: 4%;
+    color: black;
+  }
+  .altAuc{
+    text-decoration: none;
+    font-size: 3vw;
+  }
+  .vids{
+    display: inline-block;
+    margin-right: 3%;
+    margin-top: 2%;
+    color: black;
+    p{
+      padding-left: 10%;
+    }
+    iframe{
+      width: 400px;
+      height: 250px;
+      border-radius: 10px;
+
+    }
+  }
+}

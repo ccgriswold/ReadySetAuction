@@ -1,0 +1,39 @@
+doctype html
+
+html(lang=en)
+  head
+    title Flaming Tires Auction Block
+    link(rel="icon" type="image/jpg" href="http://www.union-auction.com/th/home/newwebdesign1/images/car-auction-icon.png")
+
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic" rel="stylesheet" type="text/css")
+    link(href="css/main.css" rel="stylesheet" type="text/css")
+
+    script(src="http://code.jquery.com/jquery-2.2.3.min.js")
+    script(src="http://underscorejs.org/underscore-min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js")
+
+    script(src="js/app.js")
+    //- End head section
+
+  body(ng-app="AuctionApp")
+    header#header
+      img#headImage(type="image/jpg" src="https://i.ytimg.com/vi/g9OSUEsk1pE/maxresdefault.jpg")
+      div#headTop
+        h1 Flaming Tires Auction Block
+    nav#navbar
+      li.navOps: a.clickOps(href="#/main") Home
+      li.navOps: a.clickOps(href="#/auctions") Auctions
+      //- li.navOps: a.clickOps(href="#/collectors") Collector Cars
+      li.navOps: a.clickOps(href="#/previous") Previous Results
+      li.navOps: a.clickOps(href="#/tv") Televised
+      li.navOps: a.clickOps(href="#/contact") Contact        
+          
+    //- side bar animation?
+
+    main#content(ng-view)
+
+  footer
+    //- img#footImage(type="image/jpg" src="")
+    
+    

@@ -1,0 +1,13 @@
+div#auctionsview.page-views
+  h1 Ready, Set, Auction
+  div#scrollboxdisplay
+    div.auctionOptions(ng-repeat="car in carLot | orderBy: '-'")
+      a(ng-click="selected(car)" href="#/collectors")
+        img.carImage(ng-src="{{ car.image }}")
+        h2.carTitle {{car.title}}
+        p.year {{ car.year }}
+        p.miles {{ car.miles }}
+      //- p.published {{car.published | timeLeft??? }}
+      
+      
+      

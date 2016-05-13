@@ -1,0 +1,17 @@
+div#tvview.page-views
+
+  h1 Featured Streams Of The Week
+  
+  h2: a.stream(ng-click="alert()") Click Here For Our Live Stream!
+  
+  h2#altStream Other Auction Streams
+  ul: a.altAuc(href="http://www.gaaclassiccars.com/general-public/watch-online.aspx" target="_blank") GAA Classic Cars
+  ul: a.altAuc(href="http://www.barrett-jackson.com/Live/Streaming/Video" target="_blank") Barrett-Jackson
+  ul: a.altAuc(href="http://www.centralcarauctions.com/trade/vehicles/live-auction-streaming/?camera=2b" target="_blank") Central Car Auction
+  
+  div.vids
+    p.vidName Mecum Auction, Chicago | Velocity
+    iframe(src="https://www.youtube.com/embed/CDkD0UjnFro" frameborder="0" allowfullscreen)
+  div.vids
+    p.vidName RM Auction, London | Evo Tv
+    iframe(src="https://www.youtube.com/embed/KT__ewQcctg" frameborder="0" allowfullscreen)

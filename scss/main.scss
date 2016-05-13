@@ -1,0 +1,100 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "./auctions";
+// @import "./previous";
+// @import "./streaming";
+@import "./tv";
+// @import "./contact";
+
+$primary-color: #1352A2;
+$font-color1: #fa7b06;
+$font-color2: #af4946;
+$font-color3: #46025b; /*A hover mod*/
+$background: #B0B0B0;
+$font-stack: 'Philosopher', sans-serif;
+
+
+.hidden{
+  display: none;
+}
+html{
+  background-color: #5d6163;
+  color: white;
+}
+
+body{
+  margin: 0;
+}
+
+header{
+  width: 100%;
+  // color: $font-color1;
+  color: #902939;
+  img{
+    width: 100%;
+    height: 15vw;
+    position:relative;
+  }
+  #headTop{
+    position: absolute;
+    top: 0;
+    h1{
+      text-align: center;
+      font-size: 6vw;
+      padding-left: 2px;
+      padding-right: 2px;
+      font: "comic sans";
+    }
+  }
+}
+#navbar{
+  text-align: center;
+  background-color: black;
+  margin-top: -4px;
+  .navOps{
+    display: inline-block;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding: 1%;
+  }
+  a{
+    text-decoration: none;
+    font-size: 2.75vw;
+    color: $font-color1;
+    border-radius: $font-color2;
+  }
+  a:visited{
+    color: $font-color1;
+  }
+  a:hover{
+    background-color: $font-color2;
+    color: $font-color3;
+  }
+}
+#mainview{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  text-align: center;
+  .upAuctions{
+    border: 5px solid black;
+    margin-top: 5%;
+    .title{
+      width: 75vw;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      align-content: center;
+      margin-left: 1.80%;
+      }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+  }
+
+  #eventImg{
+    width: 75vw;
+  }
+}
