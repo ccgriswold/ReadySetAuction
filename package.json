@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/claygrizzy/ReadySetAuction#readme",
   "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angularfire": "^1.2.0",
+    "firebase": "^2.4.2",
     "gulp-pug": "^2.0.0",
     "hapi": "^13.4.0",
     "jade": "^1.11.0",

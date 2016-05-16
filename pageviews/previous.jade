@@ -1,5 +1,5 @@
 h1 Previous Auction List/Sale Prices
-div#scrollboxdisplay
+div#scrollboxdisplay2
   div.auctionOptions(ng-repeat="car in carLot | orderBy: '-'")
     a(ng-click="selected(car)" href="#/collectors")
       img.carImage(ng-src="{{ car.image }}")
