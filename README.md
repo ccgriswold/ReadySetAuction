@@ -10,6 +10,7 @@ Libraries Used:
   Headroom.js
   Firebase
   FlipClock.js
+  
 Compilers:
   Jade/Pug
   Scss
