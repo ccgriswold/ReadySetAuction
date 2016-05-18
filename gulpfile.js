@@ -7,6 +7,7 @@ var gulpBrowser = require("gulp-browser");
 var uglify      = require('gulp-uglify');
 // var gulpPug    = require('gulp-pug');
 var gulpJade    = require('gulp-jade');
+var duration    = require('gulp-duration');
 
 gulp.task('default', ['html', 'pageviews', 'css', 'js', 'images']);
 
@@ -29,12 +30,15 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-   return gulp.src('./js/*.js')
-      .pipe(babel({
-        presets: ['es2015']
-      }))
-      .pipe(ngAnnotate())
+   return gulp.src('./js/app.js')
       .pipe(gulpBrowser.browserify())
+      // .pipe(duration('browserifying'))
+      // .pipe(babel({
+      //   presets: ['es2015']
+      // }))
+      // .pipe(duration('babeling'))
+      .pipe(ngAnnotate())
+      // .pipe(duration('ngAnnotating'))
       //.pipe(uglify())
       .pipe(gulp.dest('./public/js/'));
 });

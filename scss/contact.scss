@@ -1,6 +1,7 @@
 #contactview{
   @include outer-container(1);
   background-color: #d3def0;
+  margin-top: -5%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2%;
@@ -25,17 +26,19 @@
     }
     .inputBox{
       word-wrap: break-word;
+      overflow: auto;
       width: 95%;
       border: 3px solid blue;
       border-radius: 10px;
       background-color: grey;
       color: #f68b0e;
-      font-size: 13px;
+      font-size: 15px;
       padding-left: 2%;
     }
     #comment{
       width: 95%;
       padding-bottom: 25%;
+
     }
     button{
       display: block;
@@ -46,12 +49,12 @@
   .myContact{
     @include span-columns(5);
     margin-top: 66px;
-    text-align: left;
+    text-align: right;
     li{
       text-transform: uppercase;
       text-decoration: none;
       color: #b86606;
-      font-size: 13px;
+      font-size: 20px;
       list-style-type: none;
 
     }

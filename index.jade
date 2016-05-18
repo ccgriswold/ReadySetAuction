@@ -5,11 +5,13 @@ html(lang=en)
     title Flaming Tires Auction Block
     link(rel="icon" type="image/jpg" href="http://www.union-auction.com/th/home/newwebdesign1/images/car-auction-icon.png")
 
-    link(href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans|Kalam|Ravi+Prakash|Caesar+Dressing|Eater|Press+Start+2P" rel="stylesheet" type="text/css")
     link(href="css/main.css" rel="stylesheet" type="text/css")
 
     script(src="http://code.jquery.com/jquery-2.2.3.min.js")
     script(src="http://underscorejs.org/underscore-min.js")
+    script(src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js")
+    script(src="https://npmcdn.com/headroom.js@0.9.3/dist/angular.headroom.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js")
 
@@ -17,24 +19,26 @@ html(lang=en)
     //- End head section
 
   body(ng-app="AuctionApp")
-    header#header
-      div#headTop
-        h1 Flaming Tires Auction Block
-      img#headImage(type="image/jpg" src="https://i.ytimg.com/vi/g9OSUEsk1pE/maxresdefault.jpg")
-
-    nav#navbar
+    
+    nav#navbar(role="navigation")
       li.navOps: a.clickOps(href="#/main") Home
       li.navOps: a.clickOps(href="#/auctions") Auctions
       //- li.navOps: a.clickOps(href="#/collectors") Collector Cars
-      li.navOps: a.clickOps(href="#/previous") Previous Results
+      li.navOps: a.clickOps(href="#/previous") Sold
       li.navOps: a.clickOps(href="#/tv") Televised
-      li.navOps: a.clickOps(href="#/contact") Contact        
+      li.navOps: a.clickOps(href="#/contact") Contact      
           
+    header#header
+      img#headImage(type="image/jpg" src="./images/flamingcar.jpg")
+      div#headTop
+        h1(class="animated <!--infinate--> shake") Flaming Tires Auction Block
+
     //- side bar animation?
 
     main#content(ng-view)
 
   footer
-    //- img#footImage(type="image/jpg" src="")
-    
+    ul UI half baked then deep fried for your enjoyment by: 
+      a(href="http://www.claytongriswold.com" target="_blank") Clayton Griswold
+    ul API Supported By: Michael Grill
     
