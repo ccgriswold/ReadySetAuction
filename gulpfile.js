@@ -7,7 +7,7 @@ var gulpBrowser = require("gulp-browser");
 var uglify      = require('gulp-uglify');
 // var gulpPug    = require('gulp-pug');
 var gulpJade    = require('gulp-jade');
-var duration    = require('gulp-duration');
+// var duration    = require('gulp-duration');
 
 gulp.task('default', ['html', 'pageviews', 'css', 'js', 'images']);
 
