@@ -43,8 +43,18 @@
     }
     button{
       display: block;
-      font-size: 20px;
+      font-size: 2.5vw;
       margin-top: 3%;
+      border-radius: 15px;
+      font-style: 'Press Start 2P';
+      background-color: grey;
+      color: #f78909;
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button:hover{
+      background-color: #5d24d5;
     }
   }
   .myContact{
@@ -55,8 +65,10 @@
       text-transform: uppercase;
       text-decoration: none;
       color: #b86606;
-      font-size: 20px;
+      font-size: 2vw;
       list-style-type: none;
+      overflow: auto;
+
 
     }
   }
