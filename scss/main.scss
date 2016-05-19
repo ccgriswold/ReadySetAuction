@@ -8,6 +8,7 @@
 @import "./tv";
 @import "./contact";
 @import "./sold";
+@import "./mainpage";
 
 $primary-color: #1352A2;
 $font-color1: #fa7b06;
@@ -26,12 +27,13 @@ $font-stack2: 'Philosopher', sans-serif;
 html{
   background-color: #5d6163;
   color: white;
+  height: auto;
 }
 body{
   margin: 0;
 }
 
-header{
+#header{
   width: 100%;
   margin-bottom:15%;
   // color: $font-color1;
@@ -57,10 +59,12 @@ header{
   }
 
 #navbar{
+  position: sticky;
   width: 100%;
+  top: 0px;
   text-align: center;
   background-color: black;
-  margin-top: -4px;
+  // margin-top: -4px;
   .navOps{
     display: inline-block;
     margin-right: 1%;
@@ -81,53 +85,10 @@ header{
     color: $font-color3;
   }
 }
-
-#mainview{
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  text-align: center;
-  .mainTop{
-    font-size: 5em;
-    font-family: fantasy;
-  }
-  .upAuctions{
-    margin-top: 5%;
-    .title{
-      width: 90%;
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      align-content: center;
-      margin-left: 1.80%;
-      font-family: 'Ravi Prakash';
-      font-size: 2em;
-      }
-    a{
-      text-decoration: none;
-      color: white;
-    }
-    h1{
-      margin: 0;
-    }
-    h2{
-      margin-top: 0;
-    }
-  }
-  .eventImg{
-    width: 90%;
-    border-radius: 10px;
-  }
-  .eventInfo{
-    font-size: 2em;
-    font-family: 'Ravi Prakash';
-    margin-top: -10%;
-    padding-bottom: 3%;
-  }
-}
 footer{
   background-image: url("http://thumbs.dreamstime.com/t/asphalt-road-texture-loop-15392154.jpg");
   width: 100%;
+  position: static;
 
   ul{
     display: inline-block;

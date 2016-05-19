@@ -8,7 +8,7 @@
   .scrollboxdisplay{
     display: flex;
     flex-wrap: wrap;
-    height: 70vh;
+    height: 80vh;
     width: 90%;
     justify-content: space-around;
     overflow: auto;
@@ -44,7 +44,7 @@
       padding-right: .5%;
       font-size: 2vw;
       text-align: center;
-      height: 12vh;
+      height: 10vh;
     }
     ul{
       display: inline-block;
