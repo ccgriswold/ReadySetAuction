@@ -18,8 +18,8 @@ module.exports = (function(){
     }
 
   service.factory('CarListService', function($http){
-    let carCollection = [];
     let carNames = [];
+    let soldCars = [];
 
     return{
       fetchCar: function(){
@@ -27,40 +27,41 @@ module.exports = (function(){
           method: 'GET',
           url: 'https://evening-depths-24907.herokuapp.com/cars',
         }).then(function(response){
-          console.log(response);
-            angular.copy(response.data, carNames);
-            console.log(carNames);
 
-        });
-        return carNames;
+          for(let i = 0; i < response.data.length; i++){
+            let title = response.data[i].title;
+            let miles = response.data[i].miles;
+            let year = response.data[i].year;
+            let image = response.data[i].image;
+            let id = response.data[i].id;
 
-      },
-
-      previousSoldCars: function(){
-        $http({
-          method: 'GET',
-          url: 'https://evening-depths-24907.herokuapp.com/cars',
-        }).then(function(response2){
-          console.log(response2);
-            // angular.copy(response2.data, carCollection);
-            console.log(carCollection);
-            for(let i = 0; i < response.data.length; i++){
-              let title = response.data[i].title;
-              let miles = response.data[i].miles;
-              let year = response.data[i].year;
-              let image = response.data[i].image;
-              let id = response.data[i].id;
-
-              let savedCar = new Car(id, image, miles, title, year);
-              console.log(savedCar);
-              carNames.push(savedCar);
-              let carToSave = new Firebase('https://griswold-car-auction.firebaseio.com/savedcars/'+ savedCar.id);
-              carToSave.set(savedCar, function(){
-                console.log('Cars saved');
-              });
-
+            let savedCar = new Car(id, image, miles, title, year);
+            // console.log(savedCar);
+            carNames.push(savedCar);
+            let carToSave = new Firebase('https://griswold-car-auction.firebaseio.com/carlist/'+ savedCar.id);
+            carToSave.set(savedCar, function(){
+              console.log('Cars saved');
+            });
           }
         });
+        return carNames;
+      },
+
+      soldCars: function(){
+        let firePull = new Firebase('https://griswold-car-auction.firebaseio.com/savedcars/');
+
+        return firePull.once('value').then(function(cars){
+          let carCollection = [];
+          let data = cars.val();
+
+          for (var carId in data) {
+            carCollection.push(data[carId]);
+          }
+
+          return carCollection;
+        });
+
+        // return carCollection;
       },
 
     };

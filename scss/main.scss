@@ -7,6 +7,7 @@
 // @import "./streaming";
 @import "./tv";
 @import "./contact";
+@import "./sold";
 
 $primary-color: #1352A2;
 $font-color1: #fa7b06;
@@ -49,7 +50,8 @@ header{
       text-transform: uppercase;
       margin: 0;
       position: relative;
-      text-align: center;
+      text-align: left;
+      // width: 45%;
       }
     }
   }
@@ -67,7 +69,7 @@ header{
   }
   a{
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     color: $font-color1;
     border-radius: $font-color2;
   }
@@ -79,35 +81,54 @@ header{
     color: $font-color3;
   }
 }
+
 #mainview{
   margin-left: auto;
   margin-right: auto;
-  width: 80vw;
+  width: 90%;
   text-align: center;
+  .mainTop{
+    font-size: 5em;
+    font-family: fantasy;
+  }
   .upAuctions{
-    border: 5px solid black;
     margin-top: 5%;
     .title{
-      width: 75vw;
+      width: 90%;
       position: absolute;
       margin-left: auto;
       margin-right: auto;
       align-content: center;
       margin-left: 1.80%;
+      font-family: 'Ravi Prakash';
+      font-size: 2em;
       }
     a{
       text-decoration: none;
       color: white;
     }
+    h1{
+      margin: 0;
+    }
+    h2{
+      margin-top: 0;
+    }
   }
   .eventImg{
-    width: 75vw;
+    width: 90%;
+    border-radius: 10px;
+  }
+  .eventInfo{
+    font-size: 2em;
+    font-family: 'Ravi Prakash';
+    margin-top: -10%;
+    padding-bottom: 3%;
   }
 }
 footer{
   background-image: url("http://thumbs.dreamstime.com/t/asphalt-road-texture-loop-15392154.jpg");
   width: 100%;
-  
+
   ul{
     display: inline-block;
     a{

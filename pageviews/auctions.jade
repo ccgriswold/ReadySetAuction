@@ -1,10 +1,10 @@
 div#auctionsview.page-views
-  h1 Next on the Block
+  h1 Next to the Block
   div.scrollboxdisplay
     div.auctionOptions(ng-repeat="car in carLot | orderBy: '-'" target="_blank")
       a(ng-click="selected(car)" href="{{ car.reference }}")
         img.carImage(ng-src="{{ car.image }}")
-        //- ul.soldIcon(ng-class="theyreSold(car.title) ? '' : 'hidden'" id="{{ car.id }}") Sold!     
+        //- ul.soldIcon.hidden(ng-class="theyreSold(car.title) ? '' : 'hidden'") Sold!     
       h2.carTitle {{ car.year }} {{ car.title }}
       ul.miles Milage: {{ car.miles }}
       ul.price Call For Price

@@ -1,9 +1,0 @@
-h1 Previous Auction List/Sale Prices
-div.scrollboxdisplay
-  div.auctionOptions(ng-repeat="car in saveCars | orderBy: '-'")
-    a(ng-click="selected(car)" href="http://www.classiccardatabase.com/index.php")
-      img.carImage(ng-src="{{ car.image }}")
-      h2.carTitle {{ car.year }} {{ car.title }}
-      p.miles Milage: {{ car.miles }}
-      p.price Call For Price
-    

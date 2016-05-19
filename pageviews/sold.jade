@@ -1,0 +1,9 @@
+div#sold.page-views
+  h1 Sold Consignment 
+  div.scrollboxdisplay
+    div.auctionOptions(ng-repeat="car in saveCars | orderBy: '-'" target="_blank")
+      a(ng-click="selected(car)" href="{{ car.reference }}")
+        img.carImage(ng-src="{{ car.image }}")
+        ul.soldIcon(ng-class="theyreSold(car.title) ? '' : 'hidden'") Sold!
+      h2.carTitle {{ car.year }} {{ car.title }}
+      ul.miles Milage: {{ car.miles }}
