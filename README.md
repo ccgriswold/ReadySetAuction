@@ -7,10 +7,8 @@ Libraries Used:
   Underscore
   JQuery
   Animate.css
-  Headroom.js
   Firebase
-  FlipClock.js
-  
+
 Compilers:
   Jade/Pug
   Scss
