@@ -1,56 +1,70 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "animate/animate";
+@import "flipclockuse/flipclock";
 @import "./auctions";
 @import "./previous";
 // @import "./streaming";
 @import "./tv";
 @import "./contact";
+@import "./sold";
+@import "./mainpage";
 
 $primary-color: #1352A2;
 $font-color1: #fa7b06;
 $font-color2: #af4946;
 $font-color3: #46025b; /*A hover mod*/
 $background: #B0B0B0;
-$font-stack: 'Philosopher', sans-serif;
+$font-stack1: 'Kalam','Press Start 2P';
+$font-stack2: 'Philosopher', sans-serif;
+
 
 
 .hidden{
   display: none;
 }
+
 html{
   background-color: #5d6163;
   color: white;
+  height: auto;
 }
 body{
   margin: 0;
 }
 
-header{
+#header{
   width: 100%;
+  margin-bottom:15%;
   // color: $font-color1;
-  color: #902939;
+  color: #d3ebf2;
   img{
     width: 100%;
-    height: 10vw;
-    position: relative;
+    height: 20vw;
+    position: absolute;
   }
   #headTop{
     margin: 0;
-    position: absolute;
     font-size: 3vw;
     padding-left: 5px;
     h1{
+      font-family: $font-stack1;
+      text-transform: uppercase;
       margin: 0;
-      text-align: center;
-    }
+      position: relative;
+      text-align: left;
+      // width: 45%;
+      }
     }
   }
 
 #navbar{
-  float: top;
-  text-align: left;
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  text-align: center;
   background-color: black;
-  margin-top: -4px;
+  // margin-top: -4px;
   .navOps{
     display: inline-block;
     margin-right: 1%;
@@ -59,7 +73,7 @@ header{
   }
   a{
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 1.75vw;
     color: $font-color1;
     border-radius: $font-color2;
   }
@@ -71,30 +85,16 @@ header{
     color: $font-color3;
   }
 }
-#mainview{
-  margin-left: auto;
-  margin-right: auto;
-  width: 80vw;
-  text-align: center;
-  .upAuctions{
-    border: 5px solid black;
-    margin-top: 5%;
-    .title{
-      width: 75vw;
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      align-content: center;
-      margin-left: 1.80%;
-      }
+footer{
+  background-image: url("http://thumbs.dreamstime.com/t/asphalt-road-texture-loop-15392154.jpg");
+  width: 100%;
+  position: static;
+
+  ul{
+    display: inline-block;
     a{
       text-decoration: none;
-      color: white;
+      color: orange;
     }
-
-  }
-
-  #eventImg{
-    width: 75vw;
   }
 }

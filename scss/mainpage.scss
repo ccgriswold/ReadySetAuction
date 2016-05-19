@@ -1,0 +1,55 @@
+.mainview{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: center;
+  .mainTop{
+    font-size: 6em;
+    font-family: fantasy;
+  }
+  .upAuctions{
+    margin-top: 25px;
+    // margin-bottom: 20px;
+    .title{
+      width: 90%;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      align-content: center;
+      margin-left: 1.80%;
+      font-family: 'Ravi Prakash';
+      font-size: 3em;
+      }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    h1{
+      margin: 0;
+    }
+    h2{
+      margin-top: 0;
+    }
+  }
+  #springClassic{
+    h1{
+      padding-top: 3%;
+      padding-bottom: 0;
+    }
+  }
+  .eventImg{
+    width: 90%;
+    border-radius: 15px;
+  }
+  .infoStuff{
+    margin-top: -10%;
+  }
+  .eventInfo{
+    display: inline-block;
+    font-size: 2.5em;
+    font-family: 'Ravi Prakash';
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
