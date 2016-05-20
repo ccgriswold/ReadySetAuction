@@ -11,11 +11,11 @@ div#contactview.page-views
     input.inputBox(type="text" name="email" placeholder="example@email.com")
     p.formWords Comments:
     input.inputBox#comment(type="textbox" name="comment" placeholder="Feedback Welcome!")
-    button(type="submit") Submit
+    button(ng-click="alert()" href="mailto:EMAILUS@FLAMINGTIRES.COM?cc:ccgriswold@gmail.com?subject=Mail from comments section") Submit
   div.myContact
     li Phone:
       p.clickOps (704)879-2506
     li Email:  
-      p: a.clickOps(href="mailto:ccgriswold@gmail.com?subject=Mail from Mock Auction Site") emailus@flamingtires.com
+      p: a.clickOps(href="mailto:emailus@flamingtires.com?cc:ccgriswold@gmail.com?subject=Mail from Mock Auction Site") emailus@flamingtires.com
     li Address: 
       p: a.clickOps(href="https://www.google.com/maps/place/Packard+Place/@35.227156,-80.846297,17z/data=!3m1!4b1!4m5!3m4!1s0x8856a02efdb0c7db:0x1738254013280ffd!8m2!3d35.227156!4d-80.846297" target="_blank") 222 S Church St, Charlotte, Nc 28202

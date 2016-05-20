@@ -43,7 +43,9 @@ controllers.controller('TvViewController', ['$scope', function ($scope){
 }]);
 
 controllers.controller('ContactViewController', ['$scope', function ($scope){
-  // console.log('Contact Us');
+  $scope.alert = function(){
+    alert('Thanks For The Interest');
+  };
 }]);
 
 controllers.controller('StreamingSiteController', ['$scope', function ($scope){
