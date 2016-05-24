@@ -2,7 +2,7 @@
 
 module.exports = (function(){
 
-let controllers = angular.module('Controllers', []);
+var controllers = angular.module('Controllers', []);
 
 controllers.controller('MainViewController', ['$scope', function ($scope){
   // console.log('Main View');

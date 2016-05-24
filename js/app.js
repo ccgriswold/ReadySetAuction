@@ -5,7 +5,7 @@ var angularRoute = require('angular-route');
 require('./factory');
 require('./controllers');
 
-let mainApp = angular.module('AuctionApp', ['ngRoute', 'CarListService', 'Controllers']);
+var mainApp = angular.module('AuctionApp', ['ngRoute', 'CarListService', 'Controllers']);
 
 // $(window).scroll(function () {
 //   var Bottom = $(window).height() + $(window).scrollTop() >= $(document).height();

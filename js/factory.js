@@ -2,10 +2,10 @@
 
 module.exports = (function(){
 
-  let Firebase = require('firebase');
-    let fireRequest = new Firebase('https://griswold-car-auction.firebaseio.com/');
+  var Firebase = require('firebase');
+    var fireRequest = new Firebase('https://griswold-car-auction.firebaseio.com/');
 
-  let service = angular.module('CarListService', []);
+  var service = angular.module('CarListService', []);
 
   function Car(id, image, miles, title, year){
         this.id = id;
@@ -18,8 +18,8 @@ module.exports = (function(){
     }
 
   service.factory('CarListService', function($http){
-    let carNames = [];
-    let soldCars = [];
+    var carNames = [];
+    var soldCars = [];
 
     return{
       fetchCar: function(){
@@ -28,17 +28,17 @@ module.exports = (function(){
           url: 'https://evening-depths-24907.herokuapp.com/cars',
         }).then(function(response){
 
-          for(let i = 0; i < response.data.length; i++){
-            let title = response.data[i].title;
-            let miles = response.data[i].miles;
-            let year = response.data[i].year;
-            let image = response.data[i].image;
-            let id = response.data[i].id;
+          for(var i = 0; i < response.data.length; i++){
+            var title = response.data[i].title;
+            var miles = response.data[i].miles;
+            var year = response.data[i].year;
+            var image = response.data[i].image;
+            var id = response.data[i].id;
 
-            let savedCar = new Car(id, image, miles, title, year);
+            var savedCar = new Car(id, image, miles, title, year);
             // console.log(savedCar);
             carNames.push(savedCar);
-            let carToSave = new Firebase('https://griswold-car-auction.firebaseio.com/carlist/'+ savedCar.id);
+            var carToSave = new Firebase('https://griswold-car-auction.firebaseio.com/carlist/'+ savedCar.id);
             carToSave.set(savedCar, function(){
               console.log('Cars saved');
             });
@@ -48,11 +48,11 @@ module.exports = (function(){
       },
 
       soldCars: function(){
-        let firePull = new Firebase('https://griswold-car-auction.firebaseio.com/savedcars/');
+        var firePull = new Firebase('https://griswold-car-auction.firebaseio.com/savedcars/');
 
         return firePull.once('value').then(function(cars){
-          let carCollection = [];
-          let data = cars.val();
+          var carCollection = [];
+          var data = cars.val();
 
           for (var carId in data) {
             carCollection.push(data[carId]);
